@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>jokinator</title>
+    <meta charset="UTF-8">
+
+    <link id="pagestyle" rel="stylesheet" href="static/styles.css">
+    <script src="static/script.js"></script>
+
+  </head>
+  <body>
+
+    <header>
+      <h1>Jokinator</h1>
+    </header>
+    <button type="button" id="addJokeButton" onclick="addJoke()">Add Joke</button>
+
+    <ul id="random-joke-output">
+
+    </ul>
+
+    <div id="selectJoke">
+      <form>
+      <p id="jokeID2" class="selectJokeText">JokeID</p>
+      <p id="jokeSetup2" class="selectJokeText">JokeSetup</p>
+      <p id="jokePunchline2" class="selectJokeText">JokePunchline</p>
+      <button type="button" id="submit2" onclick="">Delete Joke</button>
+    </form>
+    </div>
+
+    <div id="popup">
+      <form>
+      <input id="jokeSetup" type="text" placeholder="Joke Setup">
+      <input id="jokePunchline" type="text" placeholder="Joke Punchline">
+      <button type="button" id="submit" onclick="submitJoke()">Submit</button>
+    </form>
+    </div>
+
+    <ul id="data-output">
+      <li>
+        <div id="jokePreviewList">
+        <h2 id="jokeTitle">Joke ${count}</h2>
+        <p id="${joke.jokeID}" class="jokeText">${joke.jokeSetup}</p>
+        <button type="button" id="jokeRevealButton" onclick="revealJokeButton('${joke.jokeID}', '${joke.jokeSetup}', '${joke.jokePunchline}')">Reveal Joke</button>
+        <button type="button" id="deleteJokeButton" onclick="selectJoke('${joke.jokeID}', '${joke.jokeSetup}', '${joke.jokePunchline}')">X</button>
+      </div>
+    </li>  
+    </ul>
+
+  </body>
+</html>
+
